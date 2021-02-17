@@ -11,7 +11,7 @@ let loveswim = prompt('Do i love swimming?y/yes').toLowerCase();
 //console.log(loveswim);
 
 const swimFunction = function (swim) {
-  loveswim = swim;
+  loveswim = swim.toLowerCase();
 
   while ((loveswim!=='yes' && loveswim!=='y') && (loveswim!=='n'&& loveswim!=='no')&&loveswim==='') {
     //console.log('invalid answer')
@@ -40,30 +40,37 @@ swimFunction(loveswim);
 
 let dive = prompt('Have i ever dive? y/yes').toLowerCase();
 //console.log(dive);
-const diive=function (question2)
-{while ((dive!=='yes' && dive!=='y') && (dive!=='n'&& dive!=='no')&&dive==='') {
-  //console.log('invalid answer')
-  dive=question2();
-  alert('invalid answer');
-  dive=prompt('Have i ever dive?y/yes');
-}
 
-if (dive==='no' || dive==='n') {
-  alert('never in my life');
-  score++;
-  console.log(score);
-} else {
-  if (dive==='yes' || dive ==='y')
-    alert('wrong answer');
-}
+const diive=function (question2)
+{
+  dive=question2.toLowerCase();
+
+  while ((dive!=='yes' && dive!=='y') && (dive!=='n'&& dive!=='no')&&dive==='') {
+  //console.log('invalid answer')
+
+    alert('invalid answer');
+    dive=prompt('Have i ever dive?y/yes');
+  }
+
+  if (dive==='no' || dive==='n') {
+    alert('never in my life');
+    score++;
+    console.log(score);
+  } else {
+    if (dive==='yes' || dive ==='y')
+      alert('wrong answer');
+  }
 
 };
+
 diive(dive);
 
 let likedive = prompt('Do i like diving?y/yes').toLowerCase();
 //console.log(likedive);
+
 const liikedive=function(question3){
-  likedive=question3();
+  likedive=question3.toLowerCase();
+
   while ((likedive!=='yes' && likedive!=='y') && (likedive!=='n'&& likedive!=='no')&& likedive==='') {
     //console.log('invalid answer')
     alert('invalid answer');
@@ -87,7 +94,7 @@ let divesuit = prompt('Have i ever wore a diving suit?y/yes').toLowerCase();
 //console.log(divesuit);
 const divee=function(question4)
 {
-  divesuit=question4();
+  divesuit=question4.toLowerCase();
   while ((divesuit!=='yes' && divesuit!=='y') && (divesuit!=='n'&& divesuit!=='no')&& divesuit==='') {
     //console.log('invalid answer')
     alert('invalid answer');
@@ -109,9 +116,10 @@ divee(divesuit);
 
 let Coral = prompt('Do i like Coral?y/yes').toLowerCase();
 //console.log(Coral);
+
 const cooral=function(question5)
 {
-  Coral=question5();
+  Coral=question5.toLowerCase();
   while ((Coral!=='yes' && Coral!=='y') && (Coral!=='n'&& Coral!=='no')&& Coral==='') {
     //console.log('invalid answer')
     alert('invalid answer');
@@ -132,7 +140,8 @@ cooral(Coral);
 let Age = prompt('How old i am?');
 const myage = function(question6)
 {
-  Age=question6;
+  Age=question6.toLowerCase();
+
   for(let i=0; i<3 ; i++)
 
     if(Number(Age)===25)
@@ -165,7 +174,7 @@ alert('mansaf mlokheyeh msakhan');
 let dish=prompt('what is my favourite dish from this list ');
 const food= function(question7)
 {
-  dish=question7;
+  dish=question7.toLowerCase();
   for(let i=0;i<5;i++){
     if (dish===arr[0]) {
       alert('who doesnt love mansaf!!');
