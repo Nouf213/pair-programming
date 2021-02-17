@@ -1,0 +1,45 @@
+body {
+    width: 960px;
+    margin: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    text-transform: capitalize;  
+    color: aqua;
+  }
+  
+  .logo {
+    width: 155px;
+    display: block;
+    margin: auto;
+  }
+  
+  header nav ul li {
+    display: inline;
+    padding: 10px;
+  }
+  
+  header nav ul {
+    text-align: center;
+  }
+  
+  p {
+    line-height: 30px;
+  }
+  
+  main p:nth-child(2) {
+    color: rgb(19, 126, 197);
+  }
+  main ul li:nth-child(odd) {
+    background:blue ;
+  }
+  
+  main ul li:nth-child(even) {
+    background:cornflowerblue;
+    border-radius: 5px;
+  }
+    
+  footer {
+    text-align: center;
+  }
