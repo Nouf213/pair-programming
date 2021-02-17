@@ -9,7 +9,11 @@ printGreeting (yourname);
 
 let loveswim = prompt('Do i love swimming?y/yes').toLowerCase();
 //console.log(loveswim);
-while ((loveswim!=='yes' && loveswim!=='y') && (loveswim!=='n'&& loveswim!=='no')&&loveswim==='') {
+
+const swimFunction = function (swim) { 
+  loveswim  = swim;
+
+  while ((loveswim!=='yes' && loveswim!=='y') && (loveswim!=='n'&& loveswim!=='no')&&loveswim==='') {
 //console.log('invalid answer')
   alert('invalid answer');
   loveswim=prompt('Do i love swimming?y/yes');
@@ -27,6 +31,10 @@ else
   if(loveswim==='n' || loveswim==='no')
     alert('wrong answer');
 }
+
+}
+
+swimFunction(loveswim);
 
 
 
